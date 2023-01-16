@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nomer 6</title>
+    <link rel="stylesheet" type="text/css" href="css6.css">
+
+</head>
+<body>
+    <header>
+        <a id="logo-ref" href="#"><img id="logo" src="https://cdn-icons-png.flaticon.com/512/3698/3698156.png" alt="Логотип"></a>
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#section-1">Раздел 1</a>
+            <a href="#section-2">Раздел 2</a>
+            <a href="#section-3">Раздел 3</a>
+        </nav>
+    </header>
+
+    <section>
+      <div class="wrapper">
+        <h1>Логин</h1>
+
+        <form action="#">
+
+          <div class="field email">
+            <div class="input-area">
+              <input type="text" placeholder="Почта">
+              <i class="icon fas fa-envelope"></i>
+              <i class="error error-icon fas fa-exclamation-circle"></i>
+            </div>
+
+            <div class="error error-txt">Некорректный email</div>
+          </div>
+
+          <div class="field password">
+            <div class="input-area">
+              <input type="password" placeholder="Пароль">
+              <i class="icon fas fa-lock"></i>
+              <i class="error error-icon fas fa-exclamation-circle"></i>
+            </div>
+
+            <div class="error error-txt">Пароль должен состоять хотя бы из одного символа</div>
+          </div>
+
+          <div class="pass-txt"><a href="#">Забыли пароль?</a></div>
+          <input type="submit" value="Войти">
+        </form>
+
+        <div class="sign-txt">Нет аккаунта? <a href="#">Зарегистрируйтесь!</a></div>
+      </div>
+
+      <script type="text/javascript">
+      const form = document.querySelector("form");
+      eField = form.querySelector(".email"),
+      eInput = eField.querySelector("input"),
+      pField = form.querySelector(".password"),
+      pInput = pField.querySelector("input");
+      submitBtn = form.querySelectorAll("input[type=submit]");
+
+      function shakeEmail() {
+        eField.classList.add("shake", "error");
+        //прекращаем shake через полсекунды
+        setTimeout(()=> { eField.classList.remove("shake"); }, 500);
+      }
+
+      function shakePass() {
+        pField.classList.add("shake", "error");
+        setTimeout(()=> { pField.classList.remove("shake"); }, 500);
+      }
+
+      form.onsubmit = (e)=> {
+        e.preventDefault(); //отключает неправильное дефолтное поведение
+
+        //инициализация
+        checkEmail();
+        checkPass();
+
+        if (eInput.value == "" || eField.classList.contains("error")) { shakeEmail(); checkEmail(); };
+        if (pInput.value == "" || pField.classList.contains("error")) { shakePass(); checkPass(); };
+
+        function checkEmail() {
+          let regex = /^\S+@\S+\.\S+$/; //regex для проверки почты
+
+          if (!eInput.value.match(regex)){
+            eField.classList.add("error");
+            eField.classList.remove("valid");
+            let errorTxt = eField.querySelector(".error-txt");
+            //тернарный оператор - что есть в вводе - некорректный эмеил, иначе - поле не может быть пустым
+            (eInput.value != "") ? errorTxt.innerText = "Некорректный email" : errorTxt.innerText = "Это поле не может быть пустым";
+          } else {
+            eField.classList.remove("error");
+            eField.classList.add("valid");
+          }
+        }
+
+        function checkPass(){
+          if (pInput.value == "") {
+            pField.classList.add("error");
+            pField.classList.remove("valid");
+          } else {
+            pField.classList.remove("error");
+            pField.classList.add("valid");
+          }
+        }
+
+        if (!eField.classList.contains("error") && !pField.classList.contains("error")) {
+          window.location.href= 'https://www.google.com/';
+        }
+      }
+      </script>
+      <script src="https://kit.fontawesome.com/e7b8d55e18.js" crossorigin="anonymous"></script>
+    </section>
+
+    <footer>2021© Student MIREA. ALL RIGHTS RESERVED</footer>
+</body>
+</html>

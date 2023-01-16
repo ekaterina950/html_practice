@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+body {
+  font-family: sans-serif;
+  background: #222831;
+  color: white;
+  min-height: 80vh;
+}
+header,
+nav,
+section,
+.content-container,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+/* ========== Menu ==========*/
+header {
+  font-family: "sans-serif";
+  justify-content: space-between;
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: black;
+  box-shadow: 0 5px 10px 7px white;
+}
+#logo {
+  width: 50px;
+  transition: 0.3s;
+}
+#logo:hover {
+  transform: scale(1.2);
+}
+nav {
+  justify-content: space-between;
+  width: 40%;
+}
+nav a {
+  position: relative;
+  font-size: 13px;
+  text-decoration: none;
+  color: #fff;
+  padding: 1em 2em;
+  border: 1px solid transparent;
+  border-radius: 0.3em;
+  transition: 0.3s;
+}
+
+
+/* ========== Hero Section ==========*/
+section {
+  width: 100%;
+  height: 100vh;
+}
+/* ========== Footer ==========*/
+footer {
+  color: white;
+  background: black;
+  padding: 5px;
+}
+
+
+/*-------------выше не трогать-----------------*/
+
+section{
+  font-family: 'Ubuntu',sans-serif;
+
+}
+.navigation{
+  position: relative;
+  width: 660px;
+  height: 100px;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.navigation ul{
+  display: flex;
+  margin: 40px;
+}
+.navigation ul li{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  width: 100px;
+  height: 70px;
+  margin: 20px;
+  z-index: 1;
+}
+.navigation ul li a{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navigation ul li a .text{
+  position: absolute;
+  font-size: 12px;
+  color: #fff;
+  bottom: 20px;
+  font-weight: 400;
+  transition: 0.25s;
+  text-transform: uppercase;
+  transform: scale(0);
+}
+.navigation ul li.active a .text{
+  transform: scale(1);
+}
+.indicator{
+  position: absolute;
+  left: 0;
+  width: 100px;
+  height: 5px;
+  top: 70px;
+  border-radius: 10px;
+  transition: 0.5s;
+  background: rgb(121,6,233);
+background: linear-gradient(90deg, rgba(121,6,233,1) 35%, rgba(255,0,239,1) 100%);
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator{
+  transform: translateX(calc(135px*0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator{
+  transform: translateX(calc(135px*1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator{
+  transform: translateX(calc(138px*2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator{
+  transform: translateX(calc(140px*3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator{
+  transform: translateX(calc(140px*4));
+}
+@media (max-width: 800px) {
+
+  section {
+    width: 100%;
+    height: 230vh;
+  }
+}

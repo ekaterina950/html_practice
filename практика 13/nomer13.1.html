@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nomer 1</title>
+    <link rel="stylesheet" type="text/css" href="css1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a id="logo-ref" href="#"><img id="logo" src="https://cdn-icons-png.flaticon.com/512/3698/3698156.png" alt="Логотип"></a>
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#section-1">Раздел 1</a>
+            <a href="#section-2">Раздел 2</a>
+            <a href="#section-3">Раздел 3</a>
+        </nav>
+    </header>
+
+    <section>
+      <div class="wrapper">
+        <h3>Captcha in JS</h3>
+        <div class="captcha-area">
+          <div class="captcha-img">
+            <img src="1.png" alt="kartinka">
+            <span class="captcha"></span>
+          </div>
+          <button class="reload-btn"><i class="fas fa-redo-alt"></i></button>
+        </div>
+        <form class="input-area" action="#">
+          <input type="text" placeholder="Enter Captcha" maxlength="6" required>
+          <button class="check-btn">Check</button>
+        </form>
+        <div class="status-txt"></div>
+      </div>
+    </section>
+    <script type="text/javascript">
+      const captcha = document.querySelector(".captcha");
+      const reloadBtn = document.querySelector(".reload-btn");
+      const inputField = document.querySelector("input");
+      const checkBtn = document.querySelector(".check-btn");
+      const statusTxt = document.querySelector(".status-txt");
+
+      let allCharacters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P',
+      'Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l',
+      'm','n','o','p','q','r','s','t','u','v','w','x','y','z',0,1,2,3,4,5,6,7,8,9];
+      function getCaptcha(){
+        for(let i = 0; i < 6; i++){
+          let randomChar = allCharacters[Math.floor(Math.random()*allCharacters.length)] ;
+          captcha.innerText += ` ${randomChar}`  ;
+        }
+      }
+      getCaptcha();
+      reloadBtn.addEventListener("click", ()=>{
+        captcha.innerText = "";
+        getCaptcha();
+      });
+      checkBtn.addEventListener("click", e=>{
+        e.preventDefault();
+        statusTxt.style.display = "block";
+        let inputVal = inputField.value.split('').join(' ');
+        if(inputVal == captcha.innerText){
+            statusTxt.style.color = "#4db2ec";
+          statusTxt.innerText = "great. Captch matched";
+          setTimeout( ()=> { clear(); getCaptcha(); }, 3000);
+          setTimeout(()=>{
+            statusTxt.style.display = "";
+            inputField.value = "";
+            captcha.innerText = "";
+            getCaptcha();
+          }, 4000);
+        }
+        else{
+            statusTxt.style.color = "#ff0000";
+          statusTxt.innerText = "Captch not matched. Pls try again.";
+        }
+      })
+    </script>
+
+    <footer>2021© Student MIREA. ALL RIGHTS RESERVED</footer>
+</body>
+</html>

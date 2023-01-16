@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+body {
+  font-family: sans-serif;
+  background: #222831;
+  color: white;
+
+}
+header,
+nav,
+section,
+.content-container,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+/* ========== Menu ==========*/
+header {
+  font-family: "sans-serif";
+  justify-content: space-between;
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: black;
+  box-shadow: 0 5px 10px 7px white;
+}
+#logo {
+  width: 50px;
+  transition: 0.3s;
+}
+#logo:hover {
+  transform: scale(1.2);
+}
+nav {
+  justify-content: space-between;
+  width: 40%;
+}
+nav a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #fff;
+  padding: 1em 2em;
+  border: 1px solid transparent;
+  border-radius: 0.3em;
+  transition: 0.3s;
+}
+nav a:hover {
+  border: 1px solid #f05454;
+}
+
+/* ========== Hero Section ==========*/
+section {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+/* ========== Footer ==========*/
+footer {
+  color: white;
+  background: black;
+  padding: 5px;
+}
+
+
+/*-------------выше не трогать-----------------*/
+.container{
+  display: flex;
+  justify-content: center;
+}
+.card{
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text" "stats";
+  font-family: roboto;
+  margin: 20px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+  text-align: center;
+  color: black;
+  transition: 1s;
+}
+.card-image{
+  grid-area: image;
+  background: url("2.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+.card-text{
+  grid-area: text;
+  margin: 25px;
+}
+.card-text .date{
+  color: rgb(255,7,110);
+  font-size: 13px;
+}
+.card-text p{
+  color: grey;
+  font-size: 15px;
+  font-weight: 300;
+}
+.card-text h2{
+  margin-top: 0px;
+  font-size: 28px;
+}
+.card-stats{
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(255,7,110);
+  overflow: hidden;
+}
+.d1{
+  background: #7FFFD4;
+}
+ .d2{
+  background: #CD5C5C;
+}
+.card-stats .stat{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  color: white;
+  border: 1px solid black;
+}
+.card-stats .type{
+  font-size: 11px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.card-stats .value{
+  font-size: 22px;
+  font-weight: 500;
+}
+.card:hover{
+  transform: scale(1.2);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 800px) {
+
+  section {
+    width: 100%;
+    height: 230vh;
+  }
+}

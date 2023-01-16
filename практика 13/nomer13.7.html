@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nomer 7</title>
+    <link rel="stylesheet" type="text/css" href="css7.css">
+
+</head>
+<body>
+    <header>
+        <a id="logo-ref" href="#"><img id="logo" src="https://cdn-icons-png.flaticon.com/512/3698/3698156.png" alt="Логотип"></a>
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#section-1">Раздел 1</a>
+            <a href="#section-2">Раздел 2</a>
+            <a href="#section-3">Раздел 3</a>
+        </nav>
+    </header>
+
+    <section>
+      <div class="container">
+          <div class="post">
+              <div class="text">Спасибо за вашу оценку!</div>
+              <div class="edit">Edit</div>
+          </div>
+
+          <div class="star-widget">
+              <input type="radio" name="rate" id="rate-5">
+              <label for="rate-5" class="fas fa-star"></label>
+
+              <input type="radio" name="rate" id="rate-4">
+              <label for="rate-4" class="fas fa-star"></label>
+
+              <input type="radio" name="rate" id="rate-3">
+              <label for="rate-3" class="fas fa-star"></label>
+
+              <input type="radio" name="rate" id="rate-2">
+              <label for="rate-2" class="fas fa-star"></label>
+
+              <input type="radio" name="rate" id="rate-1">
+              <label for="rate-1" class="fas fa-star"></label>
+
+              <form action="#">
+                  <h1></h1>
+
+                  <div class="textarea">
+                      <textarea placeholder="Describe your experience.."></textarea>
+                  </div>
+
+                  <div class="btn">
+                      <button type="submit">POST</button>
+                  </div>
+              </form>
+          </div>
+
+      </div>
+    </section>
+    <script src="https://kit.fontawesome.com/e7b8d55e18.js" crossorigin="anonymous"></script> <!--script for icons-->
+    <script type="text/javascript">
+    const btn = document.querySelector("button");
+    const post = document.querySelector(".post");
+    const widget = document.querySelector(".star-widget");
+    const editBtn = document.querySelector(".edit");
+
+    btn.onclick = ()=> {
+        widget.style.display = "none"; //звёзды скрываются
+        post.style.display = "block"; //открывается пост
+
+        editBtn.onclick = ()=>{ //при нажатии edit - наоборот
+            widget.style.display = "block";
+            post.style.display = "none";
+        }
+    }
+
+    </script>
+
+    <footer>2021© Student MIREA. ALL RIGHTS RESERVED</footer>
+</body>
+</html>

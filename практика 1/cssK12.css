@@ -1,0 +1,17 @@
+.fir{
+  color:green;
+  font-style:italic;
+  font-family: "Courier"
+
+}
+.sec{
+  color: red;
+  font-style: bold;
+  font-family: "Times New Roman";
+
+}
+.third{
+  color: pink;
+  font-style: oblique;
+  font-family: "Times New Roman";
+}

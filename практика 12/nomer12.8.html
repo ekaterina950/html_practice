@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nomer 1</title>
+    <link rel="stylesheet" type="text/css" href="css8.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/solid.css">
+
+</head>
+<body>
+    <header>
+        <a id="logo-ref" href="#"><img id="logo" src="https://cdn-icons-png.flaticon.com/512/3698/3698156.png" alt="Логотип"></a>
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#section-1">Раздел 1</a>
+            <a href="#section-2">Раздел 2</a>
+            <a href="#section-3">Раздел 3</a>
+        </nav>
+    </header>
+
+    <section>
+      <div class="wrapper">
+        <form action="#">
+
+          <input type="text"  placeholder="username" maxlength="16" required>
+          <i class="uis uis-at"></i>
+          <span class="counter">16</span>
+        </form>
+      </div>
+    </section>
+    <script type="text/javascript">
+      const input = document.querySelector("form input"),
+      counter = document.querySelector("form .counter"),
+      maxi = input.getAttribute("maxlength");
+
+      input.onkeyup = ()=>{
+        counter.innerText = maxi - input.value.length;
+      }
+    </script>
+    <footer>2021© Student MIREA. ALL RIGHTS RESERVED</footer>
+</body>
+</html>

@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Kolker+Brush&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Kolker+Brush&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Comfortaa&family=Kolker+Brush&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Comfortaa&family=Kolker+Brush&family=Marck+Script&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Comfortaa&family=Kolker+Brush&family=Marck+Script&family=Roboto:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+body {
+  font-family: sans-serif;
+  background: black;
+  color: white;
+  min-height: 80vh;
+}
+header,
+nav,
+section,
+.content-container,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+/* ========== Menu ==========*/
+header {
+  font-family: "Comfortaa";
+  justify-content: space-between;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: rgba(0, 0, 0, 0.21);
+}
+#logo {
+  width: 50px;
+  transition: 0.3s;
+}
+#logo:hover {
+  transform: scale(1.2);
+}
+nav {
+  justify-content: space-around;
+  width: 100%;
+}
+nav a {
+  font-size: 15px;
+  text-decoration: none;
+  color: #fff;
+  padding: 1em 2em;
+  border: 1px solid transparent;
+  border-radius: 0.3em;
+  transition: 0.3s;
+  letter-spacing: 2pxж
+}
+.first:hover{
+  color: #03a9f4;
+  border: 0.5px solid #03a9f4;
+  box-shadow: 0 5px 7px #03a9f4;
+
+}
+.second:hover{
+  box-shadow: 0 5px 7px #ff0058;
+  border: 0.5px solid #ff0058;
+  color: #ff0058;
+}
+ .third:hover{
+   box-shadow: 0 5px 7px #4dff03;
+   border: 0.5px solid #4dff03;
+  color:#4dff03;
+}
+ .forth:hover{
+   box-shadow: 0 5px 7px #ffbc00;
+   border: 0.5px solid #ffbc00;
+  color:#ffbc00;
+}
+
+/* ========== Hero Section ==========*/
+section {
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 30px;
+}
+/* ========== Footer ==========*/
+footer {
+  color: white;
+  background: black;
+  padding: 5px;
+}
+
+
+/*-------------выше не трогать-----------------*/
+section img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+}
+.one h1{
+  position: absolute;
+  color: #fff;
+  font-size: 50px;
+  font-family: "Marck Script";
+  font-weight: 800;
+  text-align: center;
+}
+h1 .f{
+  color: #ff0058;
+}
+h1 .s{
+  color: #4dff03;
+}
+h1 .t{
+  color: #ffbc00;
+}
+ .two{
+  display: flex;
+  flex-direction: column;
+}
+.two h1{
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-family: "Comfortaa";
+}
+.grid{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ width: 660px;
+}
+.grid .el{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 200px;
+  border: 1px solid black;
+  background: white;
+  color: black;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.grid img{
+ height: 100%;
+ width: 100%;
+}
+ .grid .el .name{
+  position: absolute;
+  display:block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 150px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  opacity: 0;
+  text-align: center;
+  font-family: "Amatic SC";
+  font-family: 'Caveat', cursive;
+font-family: 'Comfortaa', cursive;
+font-family: 'Kolker Brush', cursive;
+font-family: 'Marck Script', cursive;
+font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 500;
+  transition: 1s;
+}
+.grid .el:hover .name{
+  opacity: 1;
+  cursor: pointer;
+}
+
+
+.three{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+.txt{
+  height: 50vh;
+  padding: 30px;
+  width: 600px;
+}
+.txt h2{
+  text-align: center;
+  font-family: "Comfortaa";
+  margin-bottom: 20px;
+}
+.txt p{
+  text-align: justify;
+  font-family: 'Caveat', cursive;
+font-family: 'Comfortaa', cursive;
+font-family: 'Kolker Brush', cursive;
+font-family: 'Roboto', sans-serif;
+font-size: 20px;
+}
+footer .container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+footer .container .sec h2{
+  position: relative;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+footer .container .sec h2::before{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #ffeb3b;
+}
+footer .container .sec p{
+  padding: 10px;
+  color: white;
+}
+.sci{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4,50px);
+  grid-gap: 10px;
+}
+.sci li{
+  list-style: none;
+}
+.sci li a {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(45deg,#03a9f4,#ff0058 );
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.sci li a:hover {
+  background: linear-gradient(45deg,#4dff03,#ffbc00 );
+}
+
+.sci li a .icon{
+  color: #fff;
+  font-size: 20px;
+}
+.quicklinks{
+  position: relative;
+}
+.quicklinks li{
+  list-style: none;
+}
+.quicklinks li a{
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.quicklinks li a:hover{
+  color: #ffeb3b;
+}
+.info{
+  position: relative;
+}
+.info li{
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  margin-bottom: 16px;
+}
+.info li span:nth-child(1){
+  color: #fff;
+  font-size: 20px;
+}
+.info li span{
+  color: #fff;
+
+}
+.info a{
+  color: white;
+  text-decoration: none;
+}
+.info a:hover{
+  color: #ffeb3b;
+}
+.copyrighttext{
+  width: 100%;
+
+  text-align: center;
+  padding: 8px 40px;
+  color: #fff;
+}
+.btn{
+  display: inline-block;
+  font-size: 18px;
+  padding: 24px 70px;
+  background: linear-gradient(45deg,#03a9f4,#ff0058, #4dff03,#ffbc00);
+  color: #fff;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5);
+  transition: box-shadow 0.25s;
+  z-index: 2;
+}
+.btn:active{
+  background: #d80972;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+.btn span{
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  transform: scale(0);
+
+}
+.btn span:nth-child(1){
+  top: -20%;
+  left: -10%;
+  background: #03a9f4;
+  border: 1px solid #03a9f4;
+}
+.btn span:nth-child(2){
+  top: -130%;
+  left: 0;
+  background: #ff0058;
+    border: 1px solid #ff0058;
+}
+.btn span:nth-child(3){
+  top: -50%;
+  left: 10%;
+  background: transparent;
+    border: 1px solid #03a9f4;
+}
+.btn span:nth-child(4){
+  top: -66%;
+  left: 20%;
+  background: #ffbc00;
+    border: 1px solid #ffbc00;
+}
+.btn span:nth-child(5){
+  top: -90%;
+  left: 28%;
+  background: #4dff03;
+    border: 1px solid #4dff03;
+}
+.btn span:nth-child(6){
+  top: -70%;
+  left: 42%;
+  background: #ff0058;
+    border: 1px solid #ff0058;
+}
+.btn span:nth-child(7){
+  top: -80%;
+  left: 60%;
+  background: transparent;
+    border: 1px solid #ff0058;
+}
+.btn span:nth-child(8){
+  top: -50%;
+  left: 70%;
+  background: #03a9f4;
+    border: 1px solid #03a9f4;
+}
+.btn span:nth-child(9){
+  top: -120%;
+  left: 80%;
+  background: transparent
+    border: 1px solid #ffbc00;
+}
+.btn span:nth-child(10){
+  top: -70%;
+  left: 90%;
+  background: #ff0058;
+    border: 1px solid #ff0058;
+}
+.btn span:nth-child(11){
+  top: -80%;
+  left: 100%;
+  background: transparent;
+    border: 1px solid #ff0058;
+}
+.btn span:nth-child(12){
+  top: -50%;
+  left: 110%;
+  background: #03a9f4;
+    border: 1px solid #03a9f4;
+}
+.btn span:nth-child(13){
+  top: 40%;
+  left: -20%;
+  background: #ffbc00;
+  border: 1px solid #ffbc00;
+}
+.btn span:nth-child(14){
+  top: 60%;
+  left: 120%;
+  background: transparent;
+    border: 1px solid #4dff03;
+}
+.btn span:nth-child(15){
+  top: 160%;
+  left: -10%;
+  background: #ffbc00;
+  border: 1px solid #ffbc00;
+}
+.btn span:nth-child(16){
+  top: 120%;
+  left: 5%;
+  background: transparent;
+    border: 1px solid #03a9f4;
+}
+.btn span:nth-child(17){
+  top: 180%;
+  left: 10%;
+  background: #ffbc00;
+    border: 1px solid #ffbc00;
+}
+.btn span:nth-child(18){
+  top: 130%;
+  left: 20%;
+  background: #4dff03;
+    border: 1px solid #4dff03;
+}
+.btn span:nth-child(19){
+  top: 180%;
+  left: 33%;
+  background: transparent;
+    border: 1px solid #ffbc00;
+}
+.btn span:nth-child(20){
+  top: 180%;
+  left: 55%;
+  background: #ff0058;
+    border: 1px solid #ff0058;
+}
+.btn span:nth-child(21){
+  top: 160%;
+  left: 75%;
+  background: #03a9f4;
+    border: 1px solid #03a9f4;
+}
+.btn span:nth-child(22){
+  top: 130%;
+  left: 88%;
+  background: transparent;
+    border: 1px solid #4dff03;
+}
+.btn span:nth-child(23){
+  top: 140%;
+  left: 100%;
+  background: #ffbc00;
+    border: 1px solid #ffbc00;
+}
+.btn span:nth-child(24){
+  top: 190%;
+  left: 120%;
+  background: #4dff03;
+    border: 1px solid #4dff03;
+}
+.anim{
+  animation: moving 0.5s linear reverse forwards;
+}
+@keyframes moving {
+  0%{
+    transform: scale(0);
+  }
+  10%{
+    transform: scale(1);
+  }
+  100%{
+    top: 50%;
+    left: 50%;
+  }
+}
+@media (max-width: 991px) {
+
+  footer {
+    padding: 40px;
+  }
+  footer .container{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width: 768px){
+  footer .container{
+    grid-template-columns: repeat(1,1fr);
+  }
+  .copyrighttext{
+    padding: 8px 40px;
+  }
+}
+
+@media (max-width: 800px) {
+
+  section {
+    width: 100%;
+  }
+}
+@media (max-width: 650px) {
+  nav a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #fff;
+    padding: 1em 2em;
+    border: 1px solid transparent;
+    border-radius: 0.3em;
+    transition: 0.3s;
+    letter-spacing: 1px;
+  }
+  .two{
+    width: 100%;
+    height: 130vh;
+  }
+  .grid{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   width: 500px;
+  }
+}

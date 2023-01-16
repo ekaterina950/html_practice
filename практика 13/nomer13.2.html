@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nomer 2</title>
+    <link rel="stylesheet" type="text/css" href="css2.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</head>
+<body>
+    <header>
+        <a id="logo-ref" href="#"><img id="logo" src="https://cdn-icons-png.flaticon.com/512/3698/3698156.png" alt="Логотип"></a>
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#section-1">Раздел 1</a>
+            <a href="#section-2">Раздел 2</a>
+            <a href="#section-3">Раздел 3</a>
+        </nav>
+    </header>
+
+    <section>
+      <div class="box">
+        <h1>Отсчет дней до НГ</h1>
+        <div class="countdown">
+
+          <div class="time-section">
+            <span class="count" id="days"></span>
+            <span class="units">Days</span>
+          </div>
+          <div class="time-section">
+            <span class="count" id="hours"></span>
+            <span class="units">Hours</span>
+          </div>
+          <div class="time-section">
+            <span class="count" id="minutes"></span>
+            <span class="units">Munites</span>
+          </div>
+          <div class="time-section">
+            <span class="count" id="seconds"></span>
+            <span class="units">Seconds</span>
+          </div>
+
+        </div>
+        <img src="3.jpg" alt="kartinka">
+      </div>
+
+      <script type="text/javascript">
+        function countdown(dateEnd){
+          var timer, days, hours, minutes, seconds;
+
+          dateEnd = new Date(dateEnd);
+          dateEnd = dateEnd.getTime();
+
+          if(isNaN(dateEnd)){
+            return;
+          }
+
+          timer = setInterval(calculate, 1000);
+
+          function calculate(){
+            var dateStart = new Date ();
+            var dateStart = new Date (dateStart.getUTCFullYear(),
+               dateStart.getUTCMonth(), dateStart.getUTCDate(),
+               dateStart.getUTCHours(), dateStart.getUTCMinutes(),
+               dateStart.getUTCSeconds());
+            var timeRemaining = parseInt((dateEnd - dateStart.getTime()) / 1000)
+
+            if(timeRemaining >= 0){
+              days = parseInt(timeRemaining / 86400);
+              timeRemaining = (timeRemaining % 86400);
+
+              hours = parseInt(timeRemaining / 3600);
+              timeRemaining = (timeRemaining % 3600);
+
+              minutes = parseInt(timeRemaining / 60);
+              timeRemaining = (timeRemaining % 60);
+
+              seconds = parseInt(timeRemaining);
+
+              document.getElementById("days").innerHTML = parseInt(days, 10);
+              document.getElementById("hours").innerHTML = ("0" + hours).slice(-2);
+              document.getElementById("minutes").innerHTML = ("0" + minutes).slice(-2);
+              document.getElementById("seconds").innerHTML = ("0" + seconds).slice(-2);
+            }
+            else {
+              return;
+            }
+          }
+          function display(days, hours, minutes, seconds){}
+        }
+
+        countdown('01/01/2023 00:00:00 AM');
+      </script>
+    </section>
+
+    <footer>2021© Student MIREA. ALL RIGHTS RESERVED</footer>
+</body>
+</html>

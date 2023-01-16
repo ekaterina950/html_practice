@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+body {
+  font-family: sans-serif;
+  background: #222831;
+  color: white;
+  min-height: 80vh;
+}
+header,
+nav,
+section,
+.content-container,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+/* ========== Menu ==========*/
+header {
+  font-family: "sans-serif";
+  justify-content: space-between;
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: black;
+  box-shadow: 0 5px 10px 7px white;
+}
+#logo {
+  width: 50px;
+  transition: 0.3s;
+}
+#logo:hover {
+  transform: scale(1.2);
+}
+nav {
+  justify-content: space-between;
+  width: 40%;
+}
+nav a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #fff;
+  padding: 1em 2em;
+  border: 1px solid transparent;
+  border-radius: 0.3em;
+  transition: 0.3s;
+}
+nav a:hover {
+  border: 1px solid #f05454;
+}
+
+/* ========== Hero Section ==========*/
+section {
+  width: 100%;
+  height: 100vh;
+}
+/* ========== Footer ==========*/
+footer {
+  color: white;
+  background: black;
+  padding: 5px;
+}
+
+
+/*-------------выше не трогать-----------------*/
+
+.wrapper{
+  width: 485px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 22px 30px 40px;
+}
+.wrapper h3{
+  color: #4db2ec;
+  font-weight: 500;
+  font-size: 33px;
+  text-align: center;
+}
+.wrapper .captcha-area{
+  display: flex;
+  height: 65px;
+  margin: 30px 0 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.captcha-area .captcha-img{
+  height: 100%;
+  width: 345px;
+  user-select: none;
+  position: relative;
+  background: #000;
+  border-radius: 5px;
+}
+.captcha-img img{
+  width: 100%;
+  height: 100%;
+  opacity: 0.95;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.captcha-img .captcha{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  font-size: 35px;
+  letter-spacing: 10px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 0 2px #a9a9a9;
+  font-family: 'Noto Serif', serif;
+}
+.wrapper button{
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #4db2ec;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.captcha-area .reload-btn{
+  width: 75px;
+  height: 100%;
+  font-size: 25px;
+}
+.captcha-area .reload-btn i{
+  transition: transform 0.3s ease;
+}
+.captcha-area .reload-btn:hover i{
+  transform: rotate(15deg);
+}
+.wrapper .input-area{
+  height: 60px;
+  width: 100%;
+  position: relative;
+}
+.input-area input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  padding-left: 20px;
+  font-size: 20px;
+  border: 1px solid #bfbfbf;
+}
+.input-area input:focus,
+.input-area input:valid{
+  border: 2px solid #4db2ec;
+  padding-left: 19px;
+}
+.input-area .check-btn{
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  font-size: 17px;
+  height: 45px;
+  padding: 0 20px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+.input-area input:valid + .check-btn{
+  opacity: 1;
+  pointer-events: auto;
+}
+.wrapper .status-txt{
+  display: none;
+  text-align: center;
+  margin: 20px 0 -5px 0;
+  color: #ff0000;
+  font-size: 18px;
+
+}
+@media (max-width: 800px) {
+
+  section {
+    width: 100%;
+    height: 230vh;
+  }
+}

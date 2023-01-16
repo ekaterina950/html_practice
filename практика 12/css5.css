@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+body {
+  font-family: sans-serif;
+  background: #222831;
+  color: white;
+  min-height: 80vh;
+}
+header,
+nav,
+section,
+.content-container,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+/* ========== Menu ==========*/
+header {
+  font-family: "sans-serif";
+  justify-content: space-between;
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: black;
+  box-shadow: 0 5px 10px 7px white;
+}
+#logo {
+  width: 50px;
+  transition: 0.3s;
+}
+#logo:hover {
+  transform: scale(1.2);
+}
+nav {
+  justify-content: space-between;
+  width: 40%;
+}
+nav a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #fff;
+  padding: 1em 2em;
+  border: 1px solid transparent;
+  border-radius: 0.3em;
+  transition: 0.3s;
+}
+nav a:hover {
+  border: 1px solid #f05454;
+}
+
+/* ========== Hero Section ==========*/
+section {
+  width: 100%;
+  height: 100vh;
+}
+/* ========== Footer ==========*/
+footer {
+  color: white;
+  background: black;
+  padding: 5px;
+}
+
+
+/*-------------выше не трогать-----------------*/
+
+section{
+  font-family: 'Ubuntu',sans-serif;
+
+}
+.navigation{
+  position: relative;
+  width: 350px;
+  height: 70px;
+}
+.navigation ul{
+  display: flex;
+}
+.navigation ul li{
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+.navigation ul li a{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+.navigation ul li a .icon{
+  position: relative;
+  line-height: 75px;
+  transition: 0.5s;
+  font-size: 30px;
+}
+.navigation ul li.active a .icon{
+  font-size: 20px;
+  transform: translateY(-6px);
+}
+.navigation ul li a .text{
+  position: absolute;
+  font-size: 12px;
+  color: #fff;
+  bottom: 20px;
+  font-weight: 400;
+  transition: 0.25s;
+  text-transform: uppercase;
+  transform: scale(0);
+}
+.navigation ul li.active a .text{
+  transform: scale(1);
+}
+.indicator{
+  position: absolute;
+  left: 0;
+  width: 70px;
+  height: 70px;
+
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.navigation ul li:nth-child(1).active ~ .indicator{
+  background: #f53b57;
+  transform: translateX(calc(70px*0));
+  box-shadow: 0 15px 25px #f53b5799;
+}
+.navigation ul li:nth-child(2).active ~ .indicator{
+  background: #5d62fb;
+  transform: translateX(calc(70px*1));
+  box-shadow: 0 15px 25px #5d62fb99;
+}
+.navigation ul li:nth-child(3).active ~ .indicator{
+  background: #05c46b;
+  transform: translateX(calc(70px*2));
+  box-shadow: 0 15px 25px #05c46b99;
+}
+.navigation ul li:nth-child(4).active ~ .indicator{
+  background: #0fbcf9;
+  transform: translateX(calc(70px*3));
+  box-shadow: 0 15px 25px #0fbcf999;
+}
+.navigation ul li:nth-child(5).active ~ .indicator{
+  background: #ffa801;
+  transform: translateX(calc(70px*4));
+  box-shadow: 0 15px 25px #ffa80199;
+}
+@media (max-width: 800px) {
+
+  section {
+    width: 100%;
+    height: 230vh;
+  }
+}

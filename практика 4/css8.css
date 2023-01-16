@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+body {
+  font-family: sans-serif;
+  background: #222831;
+  color: white;
+}
+header,
+nav,
+section,
+.content-container,
+footer {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ========== Menu ==========*/
+header {
+  font-family: "sans-serif";
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: black;
+  box-shadow: 0 5px 10px 7px white;
+}
+#logo {
+  width: 50px;
+  transition: 0.3s;
+}
+#logo:hover {
+  transform: scale(1.2);
+}
+nav {
+  justify-content: space-between;
+  width: 40%;
+}
+nav a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #fff;
+  padding: 1em 2em;
+  border: 1px solid transparent;
+  border-radius: 0.3em;
+  transition: 0.3s;
+}
+nav a:hover {
+  border: 1px solid #f05454;
+}
+
+/* ========== Hero Section ==========*/
+section {
+  width: 100%;
+  height: 100vh;
+}
+/* ========== Footer ==========*/
+footer {
+  color: white;
+  background: black;
+  padding: 5px;
+}
+
+
+/*----------gradient-----------*/
+
+#section-3 {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+#section-3 .third:hover {
+    flex-direction: column;
+    align-items: stretch;
+    align-self: stretch;
+}
+#section-3 .first .gradient-card {
+    background: linear-gradient(45deg, rgb(119, 0, 255), rgb(251, 0, 255));
+}
+#section-3 .second .gradient-card {
+    background: linear-gradient(45deg, rgb(50, 200, 112), rgb(13, 172, 200));
+}
+#section-3 .third .gradient-card {
+    background: linear-gradient(45deg, rgb(211, 76, 8), rgb(235, 161, 2));
+}
+#section-3 .first{
+  flex-direction: row;
+}
+/*---------------------------------------------------*/
+#section4{
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+}
+#section4 .first .gradient-card {
+    background: linear-gradient(45deg,#800080,#DA70D6 );
+}
+#section4 .second .gradient-card {
+    background: linear-gradient(45deg, #8B0000,#F08080);
+}
+.first{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.second{
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+
+.gradient-card{
+  padding: 40px;
+  outline: 2px solid none;
+  box-shadow: 5px 5px 5px black;
+  border-radius: 20px;
+}

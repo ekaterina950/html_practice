@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+body {
+  font-family: sans-serif;
+  background: #222831;
+  color: white;
+  min-height: 80vh;
+}
+header,
+nav,
+section,
+.content-container,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+/* ========== Menu ==========*/
+header {
+  font-family: "sans-serif";
+  justify-content: space-between;
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: black;
+  box-shadow: 0 5px 10px 7px white;
+}
+#logo {
+  width: 50px;
+  transition: 0.3s;
+}
+#logo:hover {
+  transform: scale(1.2);
+}
+nav {
+  justify-content: space-between;
+  width: 40%;
+}
+nav a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #fff;
+  padding: 1em 2em;
+  border: 1px solid transparent;
+  border-radius: 0.3em;
+  transition: 0.3s;
+}
+nav a:hover {
+  border: 1px solid #f05454;
+}
+
+/* ========== Hero Section ==========*/
+section {
+  width: 100%;
+  height: 100vh;
+}
+/* ========== Footer ==========*/
+footer {
+  color: white;
+  background: black;
+  padding: 5px;
+}
+
+
+/*-------------выше не трогать-----------------*/
+section{
+  display: flex;
+  flex-direction: column;
+}
+.results{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.result{
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  height: 400px;
+  width: 300px;
+  color: black;
+}
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button{
+  background-color: darksalmon;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  cursor: pointer;
+}
+button:active{
+  transform: scale(0.95);
+}
+button:focus{
+  outline: none;
+}
+.result img{
+  object-fit: cover;
+  height: 400px;
+  width: 300px;;
+}
+@media (max-width: 800px) {
+
+  section {
+    width: 100%;
+    height: 230vh;
+  }
+}

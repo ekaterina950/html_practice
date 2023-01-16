@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nomer 4</title>
+    <link rel="stylesheet" type="text/css" href="css4.css">
+
+</head>
+<body>
+    <header>
+        <a id="logo-ref" href="#"><img id="logo" src="https://cdn-icons-png.flaticon.com/512/3698/3698156.png" alt="Логотип"></a>
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#section-1">Раздел 1</a>
+            <a href="#section-2">Раздел 2</a>
+            <a href="#section-3">Раздел 3</a>
+            
+        </nav>
+    </header>
+
+    <section>
+      <div class="navigation">
+        <ul>
+          <li class="list active">
+            <a href="#">
+              Главная
+            </a>
+          </li>
+          <li class="list">
+            <a href="#">
+              Раздел 1
+            </a>
+          </li>
+          <li class="list">
+            <a href="#">
+              Раздел 2
+            </a>
+          </li>
+          <li class="list">
+            <a href="#">
+              Раздел 3
+            </a>
+          </li>
+          <li class="list">
+            <a href="#">
+              Раздел 4
+            </a>
+          </li>
+          <div class="indicator">
+
+          </div>
+        </ul>
+
+      </div>
+
+      <script type="text/javascript">
+      let list = document.querySelectorAll('.list');
+      function setActiveClass(){
+        list.forEach((item)=>
+         item.classList.remove('active'));
+         this.classList.add('active');
+      }
+      list.forEach((item)=>
+       item.addEventListener('mouseover' , setActiveClass))
+
+      </script>
+
+
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </section>
+
+    <footer>2021© Student MIREA. ALL RIGHTS RESERVED</footer>
+</body>
+</html>

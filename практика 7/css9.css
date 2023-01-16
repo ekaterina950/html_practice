@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+body {
+  font-family: sans-serif;
+  background: #222831;
+  color: white;
+  min-height: 100vh;
+}
+header,
+nav,
+section,
+.content-container,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+/* ========== Menu ==========*/
+header {
+  font-family: "sans-serif";
+  justify-content: space-between;
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: black;
+  box-shadow: 0 5px 10px 7px white;
+}
+#logo {
+  width: 50px;
+  transition: 0.3s;
+}
+#logo:hover {
+  transform: scale(1.2);
+}
+nav {
+  justify-content: space-between;
+  width: 40%;
+}
+nav a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #fff;
+  padding: 1em 2em;
+  border: 1px solid transparent;
+  border-radius: 0.3em;
+  transition: 0.3s;
+}
+nav a:hover {
+  border: 1px solid #f05454;
+}
+
+/* ========== Hero Section ==========*/
+section {
+  width: 100%;
+  height: 130vh;
+}
+/* ========== Footer ==========*/
+footer {
+  color: white;
+  background: black;
+  padding: 5px;
+}
+
+
+/*-------------выше не трогать-----------------*/
+
+
+.container{
+  position: relative;
+  width: 1280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+.container .cards{
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: linear-gradient(#2196f3,#2196f3 30%,#1d3548 30%,#1d3548);
+  margin: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.container .cards .imgBox{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: 100;
+  border-radius: 20px;
+  overflow: hidden;
+  transform-origin: top;
+
+}
+.container .cards:hover .imgBox{
+  transform: translateY(30px) scale(0.5);
+}
+.container .cards .imgBox img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container .cards .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 30px;
+  transform: translateY(100%);
+  transition: 0.5s;
+
+}
+.container .cards:hover .content {
+  transform: translateY(0);
+}
+.container .cards .content .details{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+}
+.container .cards .content .details h2{
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.container .cards .content .details  span{
+  font-size: 0.8em;
+  font-weight: 400;
+  color: #03a9f4;
+}
+ .social{
+  position: relative;
+  display: flex;
+  margin-top: 5px;
+}
+.social li{
+  list-style: none;
+  margin: 10px;
+}
+
+.social li a{
+  padding: 10px;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
+  background: #294d69;
+  border-radius: 50%;
+  font-size: 1.5em;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.social li a:hover{
+  transform: rotate(360deg);
+}
+@media (max-width: 800px) {
+
+  section {
+    width: 100%;
+    height: 230vh;
+  }
+}

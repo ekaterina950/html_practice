@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+body {
+  font-family: sans-serif;
+  background: #222831;
+  color: white;
+}
+header,
+nav,
+section,
+.content-container,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ========== Menu ==========*/
+header {
+  font-family: "sans-serif";
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: black;
+  box-shadow: 0 5px 10px 7px white;
+}
+#logo {
+  width: 50px;
+  transition: 0.3s;
+}
+#logo:hover {
+  transform: scale(1.2);
+}
+nav {
+  justify-content: space-between;
+  width: 40%;
+}
+nav a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #fff;
+  padding: 1em 2em;
+  border: 1px solid transparent;
+  border-radius: 0.3em;
+  transition: 0.3s;
+}
+nav a:hover {
+  border: 1px solid #f05454;
+}
+
+/* ========== Hero Section ==========*/
+section {
+  width: 100%;
+  height: 100vh;
+}
+/* ========== Footer ==========*/
+footer {
+  color: white;
+  background: black;
+  padding: 5px;
+}
+
+
+#kartochka{
+  background: linear-gradient( black,white);
+  box-sizing: border-box;
+}
+ .card{
+  position: relative;
+  width: 800px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:linear-gradient( white,black);
+  box-shadow: 0 20px 50px #730909;
+}
+.card:hover{
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: space-around;
+}
+ .card .imgBx{
+  position: relative;
+  height: 500px;
+  width: 400px;
+  padding: 20px;
+}
+ .card .imgBx img{
+  max-width: 100%;
+  margin: 0 0 5px;
+  transition:  0.5s ease-in-out;
+}
+
+ .card .content{
+   position: absolute;
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  color: #730909;
+  visibility: hidden;
+}
+ .card:hover .content{
+   position: relative;
+  opacity: 1;
+  visibility: visible;
+}
+
+ .card .content a{
+  position: relative;
+  top: 10px;
+  padding: 12px 30px;
+  background: black;
+  color: #730909;
+  border-radius: 40px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+}
+body::-webkit-scrollbar {
+  width: 12px;               /* ширина scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: #222831;        /* цвет дорожки */
+}
+body::-webkit-scrollbar-thumb {
+  background: #222831;
+  background: linear-gradient(45deg, #8B0000,#F08080);   /* цвет плашки */
+  border-radius: 20px;       /* закругления плашки */
+
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nomer 3</title>
+    <link rel="stylesheet" type="text/css" href="css3.css">
+
+</head>
+<body>
+    <header>
+        <a id="logo-ref" href="#"><img id="logo" src="https://cdn-icons-png.flaticon.com/512/3698/3698156.png" alt="Логотип"></a>
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#section-1">Раздел 1</a>
+            <a href="#section-2">Раздел 2</a>
+            <a href="#section-3">Раздел 3</a>
+        </nav>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="card">
+          <div class="icon">
+            <img src="1.png" alt="kartinka">
+          </div>
+          <div class="content">
+            <h3>Marketing</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+              ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit
+              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+               sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+          </div>
+          <a class="more" href="#"></a>
+        </div>
+
+        <div class="card">
+          <div class="icon">
+            <img src="2.png" alt="kartinka">
+          </div>
+          <div class="content">
+            <h3>Customer Support</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+              ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit
+              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+               sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <a class="more" href="#"></a>
+        </div>
+
+        <div class="card">
+          <div class="icon">
+            <img src="3.png" alt="kartinka">
+          </div>
+          <div class="content">
+            <h3>Web Devolepment</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+              ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit
+              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+               sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <a class="more" href="#"></a>
+        </div>
+      </div>
+      <script type="text/javascript">
+        let more = document.querySelectorAll('.more');
+        for(let i = 0;i<more.length;i++){
+          more[i].addEventListener('click',function(){
+            more[i].parentNode.classList.toggle('active')
+          })
+        }
+      </script>
+    </section>
+
+    <footer>2021© Student MIREA. ALL RIGHTS RESERVED</footer>
+</body>
+</html>
